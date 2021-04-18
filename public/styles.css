@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+	background-color: #2f363d;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: auto;
+	align-content: stretch;
+}
+
+.profile {
+	flex: 2 0 20%;
+	margin: 4px;
+}
+
+.profileimage {
+	border-radius: 50%;
+}
+
+.name {
+	color: #cecece;
+	font-family: 'Ubuntu Mono', monospace;
+	display: inline-block;
+	text-decoration: none;
+	margin: 2%;
+}
+.name:hover {
+	text-decoration: underline;
+	width: fit-content;
+}
+.stats {
+	display: block;
+}
+.number {
+	color: #f9c513;
+	font-weight: bold;
+	display: inline;
+}
+.statname {
+	color: #696969;
+	display: inline;
+}
+
+.main {
+	flex: 5 0 20%;
+	margin: 4px;
+}
+
+.repos {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: auto;
+	align-content: stretch;
+}
+.repo {
+	flex: 1 1 20%;
+	box-shadow: 5px 5px 14px #222222, -5px -5px 14px #222222;
+	cursor: pointer;
+	margin: 2%;
+	flex-wrap: wrap;
+}
+.repodesc {
+	margin: 2%;
+	color: #cecece;
+}
+
+/*
+#f9c513 yellow
+#2f363d dark grey
+#051d4d dark blue
+*/

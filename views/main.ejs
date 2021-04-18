@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Index page</title>
+		<link rel="stylesheet" href="/styles.css">
+	</head>
+	<body>
+		<div class="profile">
+			<a href="<%= user.avatar_url %>"><img class="profileimage" src="<%= user.avatar_url %>"></a>
+			<br>
+			<h2 class="name"><a class="name" href="https://github.com/<%= user.login %>"><%= user.login %></a></h2>
+			<div class="stats">
+				<p class="number" id="repocount"><%= user.public_repos %></p><p class="statname"> public repos</p><br>
+				<p class="number" id="gistcount"><%= user.public_gists %></p><p class="statname"> public gists</p><br>
+				<p class="number" id="repocount"><%= user.followers %></p><p class="statname"> followers</p><br>
+				<p class="number" id="repocount"><%= user.following %></p><p class="statname"> following</p><br>
+			</div>
+		</div>
+		<div class="main">
+			<div class="repos">
+				<% repos.forEach(repo => { %>
+					<div onclick="location.href='<%= repo.html_url %>';" class="repo">
+							<p class="name"><%= repo.name %></p>
+							<p class="repodesc"><%= repo.description %></p>
+					</div>
+				<% }); %> 
+			</div>
+		</div>
+	</body>
+</html>
